@@ -10,4 +10,4 @@ const taskSchema = new mongoose.Schema({
   includes: { type: ["string"], required: true },
 });
 
-export default mongoose.models("Task", taskSchema);
+export default mongoose.model("Task", taskSchema);

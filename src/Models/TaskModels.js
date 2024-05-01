@@ -1,7 +1,12 @@
-import TaskSchema from "./TaskSchema";
-import { toursData } from "../../tours";
+import taskSchema from "./TaskSchema.js"; // Assuming TaskSchema is the model
+import { toursData } from "../../tours.js";
 
-
-export const insertTasks = (toursData) => {
-  return TaskSchema.insertMany(toursData);
+export const insertTasks = async () => {
+  try {
+    const insertedTasks = await taskSchema.insertMany(toursData);
+    return insertedTasks;
+  } catch (error) {
+    console.error("Error inserting tasks:", error);
+    throw error;
+  }
 };

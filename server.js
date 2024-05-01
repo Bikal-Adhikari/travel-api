@@ -19,6 +19,9 @@ import cors from "cors";
 app.use(express.json());
 app.use(cors());
 
+import taskRouter from "./src/routers/taskRouter.js";
+app.use("/api/data", taskRouter);
+
 app.listen(PORT, (error) => {
   error
     ? console.log(error)
