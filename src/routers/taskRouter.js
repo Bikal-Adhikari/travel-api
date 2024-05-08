@@ -5,8 +5,6 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    // Insert tasks into MongoDB
-    // await insertTasks();
     const data = await getTasks();
     console.log(data);
     res.json({
