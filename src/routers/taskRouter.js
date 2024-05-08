@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
     res.json({
       status: "success",
       message: "Tasks inserted successfully",
-      data: data,
+      data,
     });
   } catch (error) {
     console.error(error);
