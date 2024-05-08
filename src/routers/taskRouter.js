@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     // Insert tasks into MongoDB
     // await insertTasks();
-    const { data } = await getTasks();
+    const data = await getTasks();
     console.log(data);
     res.json({
       status: "success",
