@@ -1,5 +1,5 @@
 import express from "express";
-import { getTasks, insertTasks } from "../Models/TaskModels.js";
+import { getTasks } from "../Models/TaskModels.js";
 
 const router = express.Router();
 
